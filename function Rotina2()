@@ -1,0 +1,16 @@
+function Rotina2() {
+  var spreadsheet = SpreadsheetApp.getActive();
+
+  spreadsheet.getRange('AUXI!A2:I198').copyTo(spreadsheet.getRange('AUXII!A2:I198'), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
+
+  var folha = spreadsheet.getSheetByName("AUXII");
+  var intervalo = folha.getRange('A2:I198');
+  intervalo.sort([{column:3, ascending:true}]);
+
+  var folha = spreadsheet.getSheetByName("AUXII");
+  var intervalo = folha.getRange('A2:I198');
+  intervalo.sort([{column:1, ascending:true}]);
+
+  spreadsheet.getRange('AUXII!B2:H198').copyTo(spreadsheet.getRange('PLANILHA!B6:H202'), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
+
+};
