@@ -1,0 +1,10 @@
+function RotinaMae() {
+  var spreadsheet = SpreadsheetApp.getActive();
+
+  var folha = spreadsheet.getSheetByName("DADOS");
+  var intervalo = folha.getRange('B5:O2005');
+  intervalo.sort([{column:3, ascending:true}]);
+  intervalo.sort([{column:10, ascending:true}]);
+  intervalo.sort([{column:2, ascending:true}]);
+
+};
