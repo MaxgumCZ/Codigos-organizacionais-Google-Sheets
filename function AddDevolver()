@@ -1,0 +1,11 @@
+function AddDevolver() {
+  
+  var ws = "DADOS"
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(ws);
+
+  for(var i = 5; i<2005; i++){
+    if(sheet.getRange(i,2).getValue() === "DEVOLVER" ){
+      sheet.getRange(i,10).setValue("DEVOLVER")} else{};
+  }
+
+}
